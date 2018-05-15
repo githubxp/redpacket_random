@@ -7,9 +7,9 @@
  */
 
 /**
- * normal random variate generator
- * @param $m mean
- * @param $s standard deviation
+ * Normal random variate generator
+ * @param $m
+ * @param $s
  * @return float|int
  */
 function box_muller_polar($m, $s)
@@ -17,7 +17,6 @@ function box_muller_polar($m, $s)
     static $y2;
     static $use_last = 0;
 
-    /* use value from previous call */
     if ($use_last) {
         $y1 = $y2;
         $use_last = 0;
@@ -34,7 +33,6 @@ function box_muller_polar($m, $s)
         $y2 = $x2 * $w;
         $use_last = 1;
     }
-
     return ($m + $y1 * $s);
 }
 
@@ -87,7 +85,6 @@ function generateMoney($sum_mon, $pics, $min = 1, $max = 10, $sigma = 1)
             } while ($lastPic > $max);
             array_push($valueArr, $lastPic);
         }
-
         shuffle($valueArr);
         return $valueArr;
     }
