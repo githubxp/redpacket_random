@@ -1,0 +1,13 @@
+.idea/
+.idea/workspace.xml
+.DS_Store*
+Thumbs.db
+.idea
+*.log
+Runtime
+Logs
+Temp
+Cache
+/Application/Runtime
+Runtime
+./Public/uploads
